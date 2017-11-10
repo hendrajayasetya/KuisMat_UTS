@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hjs.kuismat.MainActivity">
+
+    <Button
+        android:id="@+id/SoalBaru"
+        android:onClick="SoalBaru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="Soal Baru" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/SoalBaru"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="46dp"
+        android:text="angka 1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignTop="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:text="operator" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:text="angka 2" />
+
+    <EditText
+        android:id="@+id/Angka1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:focusable="false"
+        android:enabled="false"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/Operator"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:ems="10"
+        android:focusable="false"
+        android:enabled="false"
+        android:inputType="number"
+        android:layout_alignBottom="@+id/Angka1"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/Angka1" />
+
+    <EditText
+        android:id="@+id/Angka2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/Operator"
+        android:layout_alignEnd="@+id/textView4"
+        android:layout_alignRight="@+id/textView4"
+        android:ems="10"
+        android:focusable="false"
+        android:enabled="false"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/InputJawaban"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="Input Jawaban"
+        android:layout_below="@+id/Angka1"
+        android:layout_alignLeft="@+id/Angka1"
+        android:layout_alignStart="@+id/Angka1" />
+
+    <EditText
+        android:id="@+id/Input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/InputJawaban"
+        android:layout_alignStart="@+id/InputJawaban"
+        android:layout_below="@+id/InputJawaban"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        />
+
+    <Button
+        android:id="@+id/Cek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Input"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/Input"
+        android:layout_below="@+id/Input"
+        android:onClick="CekJwb"
+        android:text="Cek Jawaban" />
+
+    <TextView
+        android:id="@+id/BenarSalah"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/Cek"
+        android:layout_alignStart="@+id/Cek"
+        android:layout_below="@+id/Cek"
+        android:layout_toLeftOf="@+id/Operator"
+        android:layout_toStartOf="@+id/Operator" />
+
+    <TextView
+        android:id="@+id/Benar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/Cek"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="13dp"
+        android:layout_toLeftOf="@+id/Angka2"
+        android:layout_toStartOf="@+id/Angka2" />
+
+    <TextView
+        android:id="@+id/Salah"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/Benar"
+        android:layout_alignStart="@+id/Benar"
+        android:layout_below="@+id/Benar"
+        android:layout_marginTop="27dp" />
+
+    <TextView
+        android:id="@+id/jawabBenar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jawaban Benar"
+        android:layout_alignBaseline="@+id/Benar"
+        android:layout_alignBottom="@+id/Benar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/jawabSalah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Salah"
+        android:layout_alignLeft="@+id/jawabBenar"
+        android:layout_alignStart="@+id/jawabBenar"
+        android:text="Jawaban Salah" />
+
+</RelativeLayout>
